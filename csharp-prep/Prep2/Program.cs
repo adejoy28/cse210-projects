@@ -10,41 +10,39 @@ class Program
 
         // As the user for their score
         Console.Write("What is your grade? ");
-        string userScore = Console.ReadLine();
-        int userScoreInt;
-        // Convert string to Int
-        bool IsuserScoreParsedIntoInt = Int32.TryParse(userScore, out userScoreInt);
+        int userScore = int.Parse(Console.ReadLine());
+
 
         string letter = "";
         string gradeSign = "";
 
-        
+
         // Test user score and assign the proper grade.
-        if ( userScoreInt >= 90 ) 
+        if (userScore >= 90)
         {
             letter = "A";
             // Console.WriteLine($"Your grade is A");
 
-        } 
-        else if ( userScoreInt >= 80 )
+        }
+        else if (userScore >= 80)
         {
             letter = "B";
             // Console.WriteLine($"Your grade is B");
 
         }
-        else if ( userScoreInt >= 70 )
+        else if (userScore >= 70)
         {
             letter = "C";
             // Console.WriteLine($"Your grade is C");
 
-        } 
-        else if ( userScoreInt >= 60 )
+        }
+        else if (userScore >= 60)
         {
             letter = "D";
             // Console.WriteLine($"Your grade is D");
 
         }
-        else if ( userScoreInt < 60 )
+        else if (userScore < 60)
         {
             letter = "F";
             // Console.WriteLine($"Your grade is F");
@@ -53,26 +51,30 @@ class Program
 
         // return a message
         string message;
-        if (userScoreInt >= 70)
+
+        if (userScore >= 70)
         {
             message = "Congratulations, you passed this class!";
-            // Console.WriteLine("Congratulations, you passed this class!");
-        } else 
+        }
+        else
         {
             message = "Ew! You can do better than this next time.";
-            // Console.WriteLine("Ew! You can do better than this next time.");
         }
 
         // Get the last digit of the user score by MODULUS division and return {sign}
-        int lastDigitOfUserScoreInt = userScoreInt % 10;
-        
-        if (lastDigitOfUserScoreInt >= 7)
+        int lastDigitOfUserScore = userScore % 10;
+
+        // Add + or - to the letter grade aside F and A+
+        if (lastDigitOfUserScore >= 7 && userScore > 60 && userScore < 93)
         {
             gradeSign = "+";
-        } else if (lastDigitOfUserScoreInt <= 3)
+        }
+        else if (lastDigitOfUserScore <= 3 && userScore > 60 && userScore < 93)
         {
             gradeSign = "-";
-        }else {
+        }
+        else
+        {
             gradeSign = "";
         }
 
