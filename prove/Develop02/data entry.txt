@@ -1,0 +1,30 @@
+Journal
+
+Create a list of prompt => 
+Show a user a random prompt from the created list
+
+Display journal and all entries
+
+Save journal to file.
+
+load journal from a file
+
+supply a menu of options that allows user choose
+
+    1. Who was the most interesting person I interacted with today?
+    2. What was the best part of my day?
+    3. How did I see the hand of the Lord in my life today?
+    4. What was the strongest emotion I felt today?
+    5. If I had one thing I could do over today, what would it be?
+
+
+
+Console -
+Welcome to the journal program
+Please select one of the following choices
+1. Write
+2. Display
+3. load
+4. Save
+5. Quit
+what would you like to do?
