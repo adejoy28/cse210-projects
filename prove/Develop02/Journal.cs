@@ -21,8 +21,19 @@ public class Journal
     }
     public void LoadFromFile(string file)
     {
-        string jsonContent = File.ReadAllText(file);
-        _entries = JsonSerializer.Deserialize<List<Entry>>(jsonContent);
+        if (File.Exists(file)) 
+        {
+            string jsonContent = File.ReadAllText(file);
+            List<Entry> entriesFromLoadedFile = JsonSerializer.Deserialize<List<Entry>>(jsonContent);
+
+            if (entriesFromLoadedFile != null)
+            {
+                _entries.AddRange(entriesFromLoadedFile);
+            }
+        }
+        else {
+            Console.WriteLine("File not found! Try again.");
+        }
 
         // string[] lines = File.ReadAllLines(file);
 

@@ -5,6 +5,13 @@ public class Entry
     public string _promptText {get; set;}
     public string _entryText {get; set;}
 
+    // public Entry()
+    // {
+    //     _date = "";
+    //     _promptText = "";
+    //     _entryText = "";
+    // }
+
     public void Display()
     {
         // Date: 12/2/1134 - Prompt: _promptText;

@@ -33,11 +33,21 @@ public class PromptGenerator
         "How can I make tomorrow even better than today?"
     };
 
+    private List<int> generatedNumber = new List<int>();
     public string GetRandomPrompt()
     {
         Random rng = new Random();
-        int index = rng.Next(_prompts.Count());
-
+        int index = rng.Next(_prompts.Count());        
         return _prompts[index];
+        
+        // int index;
+        // do
+        // {
+        //     index = rng.Next(_prompts.Count());        
+        //     return _prompts[index];
+        //     generatedNumber.Add(index);
+        // } while (!generatedNumber.Contains(index));
+
+        
     }
 }
