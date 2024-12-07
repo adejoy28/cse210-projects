@@ -3,10 +3,9 @@ public class Word
     private string _text;
     private bool _isHidden;
 
-    public Word(string text)
+    public Word(string arg)
     {
-        // _text = "For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.";
-        _text = text;
+        _text = arg; //"For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.";
         _isHidden = false;
     }
     public void Hide()
@@ -20,18 +19,17 @@ public class Word
     public bool IsHidden()
     {
         return _isHidden;
-        // Console.WriteLine(_isHidden);
     }
     public string GetDisplayText()
     {
-        // return _text; //.Split();
-        if (_isHidden == true)
+        if (_isHidden)
         {
-            return "_____";
+            return "_______";
         }
         else
         {
             return _text;
         }
+
     }
 }
