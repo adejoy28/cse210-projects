@@ -1,10 +1,11 @@
 public class Scripture {
-    Reference _reference = new Reference("John", 2,3);
-    List<Word> _words = new List<Word>();
+    Reference _reference;//= new Reference("John", 2,3);
+    List<Word> _words; // = new List<Word>();
 
     public Scripture(Reference reference, string text) 
     {
-
+        _reference = reference;
+        _words = text.Split(" ").Select(eachWord => new Word(eachWord)).ToList();
     }
 
 
@@ -20,12 +21,14 @@ public class Scripture {
         {
             int indexToHide = rand.Next(_words.Count);
             // _words[indexToHide] = "****";
+            Console.Write($"{_words[indexToHide]}/ {_words}");
+
+            foreach (var word in _words)
+            {
+                Console.WriteLine(_words);
+            }
         }
 
-        foreach (var word in _words)
-        {
-            Console.WriteLine(word);
-        }
     }
     public string GetDisplayText()
     {

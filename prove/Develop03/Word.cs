@@ -3,38 +3,35 @@ public class Word
     private string _text;
     private bool _isHidden;
 
-    public Word()
+    public Word(string text)
     {
-        _text = "For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.";
+        // _text = "For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.";
+        _text = text;
         _isHidden = false;
     }
     public void Hide()
     {
-        // string[] splittedSentence = _text.Split();
-        // if (_isHidden == false)
-        // {
-        // // foreach (var item in splittedSentence)
-        // {
-
-
-        //         char[] splittedText = item.ToCharArray();
-        //         string newCharacter = 
-        //         // Console.WriteLine(item.Count());//place(item, "-----"));
-        //         Console.Write(item + " ");//place(item, "-----"));
-
-        //     }
-        // }
+        _isHidden = true;
     }
     public void Show()
     {
-
+        _isHidden = false;
     }
-    public void IsHidden()
+    public bool IsHidden()
     {
-        Console.WriteLine(_isHidden);
+        return _isHidden;
+        // Console.WriteLine(_isHidden);
     }
     public string GetDisplayText()
     {
-        return _text; //.Split();
+        // return _text; //.Split();
+        if (_isHidden == true)
+        {
+            return "_____";
+        }
+        else
+        {
+            return _text;
+        }
     }
 }
