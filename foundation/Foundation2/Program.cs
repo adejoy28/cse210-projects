@@ -7,6 +7,7 @@ class Program
         // Product product1 = new Product("Pen", 33442234, 50.00, 5);
 
         // Console.WriteLine(product1.TotalCost());
+        Console.Clear();
 
         // Address(string street, string city, string state, string country)
         Address addr1 = new Address("9 magboro", "magboro", "Ogun", "Nigeria");
@@ -15,7 +16,7 @@ class Program
 
         // Customer(string name, Address addr)
         Customer cust1 = new Customer("John Adebayo", addr1);
-        Customer cust2 = new Customer("John Adebayo", addr2);
+        Customer cust2 = new Customer("Clement Wilson", addr2);
 
         // Product(string name, int id, double price, int qty)
         Product product1 = new Product("Pen", 35343, 500.00, 3);
@@ -28,7 +29,7 @@ class Program
         Order order1 = new Order(new List<Product>{ product1, product2}, cust1);
         Order order2 = new Order(new List<Product>{ product1, product3, product4}, cust2);
         
-        Console.Clear();
+        Console.WriteLine(1);
         DisplayToScreen(order1);
         DisplayToScreen(order2);
 
