@@ -42,27 +42,37 @@ public class Activity
     }
     public void ShowSpinner(int seconds)
     {
-        List<string> spinner = new List<string>();
-        spinner.Add("/");
-        spinner.Add("-");
-        spinner.Add("\\");
-        spinner.Add("|");
-
-        DateTime currentTime = DateTime.Now;
-        DateTime endTime = currentTime.AddSeconds(seconds);
-
-        while (endTime > currentTime)
+        for (int i = 0; i < seconds; i++)
         {
-            foreach (var s in spinner)
-            {
-                Console.Write(s);
-                Thread.Sleep(1000);
-                Console.Write("\b \b");
-            }
-            currentTime = DateTime.Now;
+            Console.Write(".");
+            Thread.Sleep(1000);
+            Console.Write("\b \b");
         }
-
+        Console.WriteLine();
     }
+    // public void ShowSpinner(int seconds)
+    // {
+    //     List<string> spinner = new List<string>();
+    //     spinner.Add("/");
+    //     spinner.Add("-");
+    //     spinner.Add("\\");
+    //     spinner.Add("|");
+
+    //     DateTime currentTime = DateTime.Now;
+    //     DateTime endTime = currentTime.AddSeconds(seconds);
+
+    //     while (endTime > currentTime)
+    //     {
+    //         foreach (var s in spinner)
+    //         {
+    //             Console.Write(s);
+    //             Thread.Sleep(1000);
+    // Console.Write("\b \b");
+    //         }
+    //         currentTime = DateTime.Now;
+    //     }
+
+    // }
     public void ShowCountDown(int seconds)
     {
         // Console.Write("Loading........");

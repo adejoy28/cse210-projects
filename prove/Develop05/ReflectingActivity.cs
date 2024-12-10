@@ -99,7 +99,7 @@ public class ReflectingActivity : Activity
         while (endTime > currentTime && showedIndices.Count() < _questions.Count())
         {
             GetRandomQuestions();
-            // ShowSpinner(5);
+            ShowSpinner(5);
 
             Console.WriteLine("");
             currentTime = DateTime.Now;
