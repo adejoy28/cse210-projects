@@ -65,15 +65,15 @@ public class ReflectingActivity : Activity
         while (showedIndices.Contains(index))
         {
             index = randomQuestion.Next(_questions.Count());
+            // while (showedIndices.Count() <= _questions.Count())
+            // {
+            // showedIndices.Clear();
+            // }
         }
         Console.Write($"> {_questions[index]} ");
         showedIndices.Add(index);
-        while (showedIndices.Count() == _questions.Count())
-        {
-            Console.WriteLine("You exhausted all the reflection questions. Kindly end now");
-            break;
-            // showedIndices.Clear();
-        }
+        // Console.WriteLine("\n\nYou exhausted all the reflection questions. Kindly end now");
+        // break;
     }
 
     public void DisplayPrompt()
@@ -96,10 +96,10 @@ public class ReflectingActivity : Activity
         DateTime currentTime = DateTime.Now;
         DateTime endTime = currentTime.AddSeconds(_duration);
 
-        while (endTime > currentTime)
+        while (endTime > currentTime && showedIndices.Count() < _questions.Count())
         {
             GetRandomQuestions();
-            ShowSpinner(5);
+            // ShowSpinner(5);
 
             Console.WriteLine("");
             currentTime = DateTime.Now;
