@@ -1,0 +1,28 @@
+Mindfulness
+
+1. Menu System that allows user to chose 
+        Menu Options
+            1. Start breathing activity
+            2. Start reflecting activity
+            3. Start listing activity
+            4. Quit
+        Select a choice from the menu: 
+2. Each activity starts with and a message (
+            name of the activity
+            descriptions of the activity
+            and ask & set the durations of the activity in seconds
+3. Each activity ends with a common message (
+            "they have done a good job" - pause
+            "list the activity they've completed" - pause
+            "length of time" - pause
+            "then pause for several seconds before finishing" - pause
+            and end.
+
+Breathing Activity
+1. Starts with a message and prompts durations that is used by all
+2. descriptions goes this way - This activity will help you reflect on 
+                        times in your life when you have shown strength 
+                        and resilience. This will help you recognize 
+                        the power you have and how you can use it 
+                        in other aspects of your life.
+3. Afterwhich 

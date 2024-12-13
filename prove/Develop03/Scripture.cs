@@ -22,6 +22,7 @@ public class Scripture
         {
             word.Hide();
         }
+
     }
     public string GetDisplayText()
     {

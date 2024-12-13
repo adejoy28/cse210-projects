@@ -1,0 +1,38 @@
+[
+    {
+        "reference": {
+            "book": "John",
+            "chapter": 3,
+            "startVerse": 16,
+            "endVerse": 17
+        },
+        "text": "16 For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life. For God sent not his Son into the world to condemn the world; but that the world through him might be saved."
+    },
+    {
+        "reference": {
+            "book": "Psalm",
+            "chapter": 13,
+            "startVerse": 5,
+            "endVerse": 6
+        },
+        "text": "But I trust in your unfailing love; my heart rejoices in your salvation. I will sing the Lord's praise,for he has been good to me"
+    },
+    {
+        "reference": {
+            "book": "Colossians",
+            "chapter": 4,
+            "startVerse": 2,
+            "endVerse": 0
+        },
+        "text": "Continue in prayer, and watch in the same with thanksgiving."
+    },
+    {
+        "reference": {
+            "book": "Romans",
+            "chapter": 1,
+            "startVerse": 17,
+            "endVerse": 0
+        },
+        "text": "For therein is the righteousness of God revealed from faith to faith: as it is written, The just shall live by faith."
+    }
+]

@@ -1,0 +1,45 @@
+Product: class {
+    _name: string
+    _product_id: int
+    _price: double
+    _quantity: int 
+
+    totalCost(): int
+        _price * _quantity
+
+}----------------------
+
+
+
+Customer: class {
+    name: string
+    address: Address{}
+    LivesInUSA(): 
+}
+
+
+
+Order: class {
+    _products: List
+    _customers: List
+
+    TotalCostOrder(): int
+    PackingLabel(): string;
+        list name and product_id of all product;
+    ShippingLabel(): string
+        lists name and address of the customer
+
+    TotalPrice = TotalCostOrder + _shippingCost
+
+}
+
+Address: class {
+    street: string
+    city: string
+    state/province: string
+    country: string;
+
+    InUSA(): bool
+    DisplayAddress(): string
+
+}
